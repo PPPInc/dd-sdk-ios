@@ -13,7 +13,7 @@ import Foundation
 // By using this environment variable, `dd-sdk-ios` consumers can choose whether to depend on the entire
 // OpenTelemetry SDK or just the API. This remains necessary until OpenTelemetry officially separates
 // the API and SDK packages (see https://github.com/open-telemetry/opentelemetry-swift/issues/486).
-let useOTelSwiftPackage = ProcessInfo.processInfo.environment["OTEL_SWIFT"] != nil
+let useOTelSwiftPackage = true // ProcessInfo.processInfo.environment["OTEL_SWIFT"] != nil
 
 let opentelemetry = useOTelSwiftPackage ?
     (name: "opentelemetry-swift", url: "https://github.com/open-telemetry/opentelemetry-swift.git", version: Version("1.13.0")) :
